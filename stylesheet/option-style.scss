@@ -1,0 +1,112 @@
+@import "variables";
+
+.options-container {
+  width: 30%;
+  height: 100%;
+  background: $dark-green	;
+  color: $light-green;
+  .options-content {
+    width: 75%;
+    margin: 20% auto;
+    text-align: center;
+    .welcome-message{
+      font-size: 1.2vw;
+    }
+    .filter-container {
+      position: relative;
+      display: block;
+      margin-top: 20%;
+      text-align: center;
+      .options-label {
+        position: absolute;
+        top: -25px;
+        left: calc(50% - 3.3vw);
+        padding: 10px;
+        font-size: 1.4vw;
+
+        font-weight: 600;
+        background: $dark-green;
+        z-index: 3;
+      }
+      form {
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 15px 30px;
+        font-size: 1.1vw;
+        border: 1px solid $light-green;
+        .select-options {
+          display: flex;
+          justify-content: space-between;
+          margin: 7% 0; 
+          font-size: 1.1vw;
+          label {
+            font-weight: 600;
+            margin: auto 0;
+          }
+
+          select {
+            width: 40%;
+            height: 30px;
+            font-size: 1.1vw;
+            text-align: center;
+            background: black;
+            color: $light-green;
+            -webkit-appearance: none;
+            border-radius: 0px;
+            border: 1px solid $light-green;
+            text-align-last: center;
+            option {
+              padding: 5px auto;
+              text-align: center;
+            }
+          }
+        }
+
+        .year-round-message {
+          font-size: 1vw;
+          font-weight: 200;
+          text-align: center;
+          span {
+            font-weight: 200;
+          }
+          span:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+        .submit {
+          margin: 20px auto;
+          margin-bottom: 0;
+          input {
+            padding: 5px 20px;
+            font-size: 1.1vw;
+            border-radius: 0px;
+            border: 1px solid $light-green;
+            -webkit-appearance: none;
+            color: $light-green;
+            background: black;
+          }
+          input:hover{
+            cursor: pointer;
+          }
+        }
+      }
+
+      
+    }
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  font-size: 1.4vw;
+  border: 1px solid $light-green;
+
+  i {
+    font-size: 28px;
+  }
+}

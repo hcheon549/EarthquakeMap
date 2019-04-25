@@ -1,0 +1,32 @@
+@import 'reset';
+@import "variables";
+
+@import 'map-style';
+@import 'option-style';
+
+body {
+  height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  font-size: 1.8vw;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+p {
+  margin: 15px auto;
+}
+
+.off {
+  display: none;
+}

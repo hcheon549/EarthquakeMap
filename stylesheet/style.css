@@ -1,0 +1,263 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol, ul {
+  list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+a {
+  color: #D0D0D0;
+  text-decoration: none; }
+
+a:visited {
+  color: #D0D0D0;
+  text-decoration: none; }
+
+.map-container {
+  width: 70%; }
+  .map-container #map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair; }
+    .map-container #map img {
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      bottom: 15px;
+      right: 15px;
+      padding: 7px;
+      background: #D0D0D0;
+      border-radius: 3px;
+      z-index: 3;
+      cursor: pointer; }
+    .map-container #map .legend-container {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      padding: 5px 10px;
+      background: #001206;
+      opacity: 0.7;
+      border: 1px solid #D0D0D0;
+      font-size: 14px;
+      color: white;
+      z-index: 3;
+      text-align: center;
+      cursor: pointer; }
+      .map-container #map .legend-container .legend-type {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 5px;
+        width: 50px; }
+        .map-container #map .legend-container .legend-type span {
+          font-size: 16px; }
+        .map-container #map .legend-container .legend-type p {
+          margin: 0;
+          vertical-align: middle; }
+    .map-container #map .lnglat-container {
+      position: absolute;
+      bottom: 18px;
+      right: 60px;
+      font-size: 14px;
+      color: #D0D0D0;
+      z-index: 3; }
+      .map-container #map .lnglat-container .lnglat-inline {
+        display: flex;
+        justify-content: space-between; }
+        .map-container #map .lnglat-container .lnglat-inline .lnglat-data {
+          min-width: 70px;
+          text-align: right; }
+    .map-container #map .displaying-container {
+      position: absolute;
+      bottom: 18px;
+      left: 15px;
+      font-size: 14px;
+      color: #D0D0D0;
+      z-index: 3; }
+
+.mapboxgl-popup {
+  min-width: 300px;
+  background: #001206;
+  color: #D0D0D0;
+  font-size: 14px;
+  border: 1px solid #D0D0D0; }
+
+.mapboxgl-canvas-container {
+  position: relative; }
+
+.mapboxgl-popup-close-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #D0D0D0;
+  text-align: right;
+  cursor: pointer; }
+
+.popup-content-container {
+  padding: 15px;
+  padding-top: 5px; }
+  .popup-content-container .info-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 7px 0; }
+    .popup-content-container .info-container .data-type {
+      font-weight: 800; }
+    .popup-content-container .info-container .info {
+      margin-left: 10px;
+      text-align: right; }
+  .popup-content-container .info-container:first-of-type {
+    margin-top: 0; }
+  .popup-content-container .link-container {
+    padding-top: 5px; }
+    .popup-content-container .link-container a:hover {
+      text-decoration: underline; }
+
+.options-container {
+  width: 30%;
+  height: 100%;
+  background: #001206;
+  color: #D0D0D0; }
+  .options-container .options-content {
+    width: 75%;
+    margin: 20% auto;
+    text-align: center; }
+    .options-container .options-content .welcome-message {
+      font-size: 1.2vw; }
+    .options-container .options-content .filter-container {
+      position: relative;
+      display: block;
+      margin-top: 20%;
+      text-align: center; }
+      .options-container .options-content .filter-container .options-label {
+        position: absolute;
+        top: -25px;
+        left: calc(50% - 3.3vw);
+        padding: 10px;
+        font-size: 1.4vw;
+        font-weight: 600;
+        background: #001206;
+        z-index: 3; }
+      .options-container .options-content .filter-container form {
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 15px 30px;
+        font-size: 1.1vw;
+        border: 1px solid #D0D0D0; }
+        .options-container .options-content .filter-container form .select-options {
+          display: flex;
+          justify-content: space-between;
+          margin: 7% 0;
+          font-size: 1.1vw; }
+          .options-container .options-content .filter-container form .select-options label {
+            font-weight: 600;
+            margin: auto 0; }
+          .options-container .options-content .filter-container form .select-options select {
+            width: 40%;
+            height: 30px;
+            font-size: 1.1vw;
+            text-align: center;
+            background: black;
+            color: #D0D0D0;
+            -webkit-appearance: none;
+            border-radius: 0px;
+            border: 1px solid #D0D0D0;
+            text-align-last: center; }
+            .options-container .options-content .filter-container form .select-options select option {
+              padding: 5px auto;
+              text-align: center; }
+        .options-container .options-content .filter-container form .year-round-message {
+          font-size: 1vw;
+          font-weight: 200;
+          text-align: center; }
+          .options-container .options-content .filter-container form .year-round-message span {
+            font-weight: 200; }
+          .options-container .options-content .filter-container form .year-round-message span:hover {
+            text-decoration: underline;
+            cursor: pointer; }
+        .options-container .options-content .filter-container form .submit {
+          margin: 20px auto;
+          margin-bottom: 0; }
+          .options-container .options-content .filter-container form .submit input {
+            padding: 5px 20px;
+            font-size: 1.1vw;
+            border-radius: 0px;
+            border: 1px solid #D0D0D0;
+            -webkit-appearance: none;
+            color: #D0D0D0;
+            background: black; }
+          .options-container .options-content .filter-container form .submit input:hover {
+            cursor: pointer; }
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  font-size: 1.4vw;
+  border: 1px solid #D0D0D0; }
+  .icons i {
+    font-size: 28px; }
+
+body {
+  height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif; }
+
+main {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  height: 100%; }
+
+h3 {
+  font-size: 1.8vw;
+  font-weight: 600;
+  letter-spacing: 0.1rem; }
+
+p {
+  margin: 15px auto; }
+
+.off {
+  display: none; }
+
+/*# sourceMappingURL=style.css.map */
